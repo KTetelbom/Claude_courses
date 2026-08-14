@@ -10,4 +10,4 @@ Cas pratiques et exercices réalisés dans le cadre du cours Anthropic sur Claud
 
 | # | Exercice | Statut |
 |---|----------|--------|
-| - | - | - |
+| 1 | [Revue de code automatisée](exercices/01-code-review) | ✅ |
