@@ -46,7 +46,7 @@ const runner = client.beta.messages.toolRunner({
 });
 
 // Returns the final assistant message after all the tool ping-pong has settled
-const finalMessage = await runner.untilDone();
+const finalMessage = await runner.runUntilDone();
 
 for (const block of finalMessage.content) {
   if (block.type === "text") {

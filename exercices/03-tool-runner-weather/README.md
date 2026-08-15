@@ -16,6 +16,8 @@ Deux tools sont fournis : `get_weather` (météo du jour) et `get_forecast`
   le helper `betaTool()` (ou `betaZodTool()` si vous préférez décrire le schéma avec Zod),
   qui portent le nom, la description et le JSON schema de l'outil, en plus de la fonction
   à exécuter.
+- `runner.untilDone()` n'existe pas dans le SDK → la bonne méthode est
+  `runner.runUntilDone()`.
 
 ## Installer les dépendances
 
