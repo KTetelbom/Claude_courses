@@ -19,5 +19,8 @@
   "homepage": "https://github.com/KTetelbom/claude_courses#readme",
   "dependencies": {
     "@anthropic-ai/sdk": "^0.117.1"
+  },
+  "devDependencies": {
+    "tsx": "^4.23.12"
   }
 }
