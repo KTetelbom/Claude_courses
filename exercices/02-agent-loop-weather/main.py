@@ -38,7 +38,7 @@ def run_tool(name, tool_input):
 
 
 messages = [
-    {"role": "user", "content": "What should I wear in Austin today?"}
+    {"role": "user", "content": "What should I wear in Paris today?"}
 ]
 
 # The agent loop. Each iteration sends messages to Claude
