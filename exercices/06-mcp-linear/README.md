@@ -13,7 +13,35 @@ exercices précédents.
 
 Le reste (`mcp_servers`, `tools`, `betas`) est déjà correct par rapport à l'API du SDK.
 
-## Obtenir un token Linear MCP
+## Deux versions
+
+- **`main.py`** — la version Linear telle que fournie, qui nécessite un
+  compte Linear et un token (voir plus bas).
+- **`main_deepwiki.py`** — une version qui utilise
+  [DeepWiki](https://docs.devin.ai/work-with-devin/deepwiki-mcp), un serveur
+  MCP public qui ne demande **aucune authentification** (pas de
+  `authorization_token`). Pratique pour tester le mécanisme `mcp_servers` /
+  `mcp_toolset` sans avoir de compte nulle part.
+
+### Installer les dépendances
+
+Depuis la racine du projet :
+
+```
+pip install -r requirements.txt
+```
+
+### Lancer la version sans compte (recommandé si vous n'avez pas Linear)
+
+```
+python exercices/06-mcp-linear/main_deepwiki.py
+```
+
+Le script demande à Claude quels outils il a à disposition et ce que fait le
+dépôt `anthropics/anthropic-sdk-python` — Claude va interroger le serveur MCP
+DeepWiki pour répondre, sans configuration supplémentaire de votre part.
+
+### Obtenir un token Linear MCP (pour lancer `main.py`)
 
 1. Connectez-vous à Linear.
 2. Allez dans **Settings → API → MCP** (ou **Settings → Security & access**
@@ -26,20 +54,6 @@ Le reste (`mcp_servers`, `tools`, `betas`) est déjà correct par rapport à l'A
    (ce fichier n'est pas versionné, comme `ANTHROPIC_API_KEY` — voir la mise en
    place initiale du projet)
 
-## Installer les dépendances
-
-Depuis la racine du projet :
-
-```
-pip install -r requirements.txt
-```
-
-## Lancer l'exercice
-
 ```
 python exercices/06-mcp-linear/main.py
 ```
-
-Le script affiche la réponse complète de Claude, qui doit lister les outils
-Linear disponibles via le serveur MCP (créer un ticket, chercher des issues,
-etc., selon ce que Linear expose).
