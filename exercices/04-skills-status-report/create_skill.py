@@ -10,7 +10,7 @@ load_dotenv(os.path.join(os.path.dirname(__file__), "..", "..", ".env.local"))
 
 client = anthropic.Anthropic()
 
-skill_dir = os.path.join(os.path.dirname(__file__), "status-report-skill")
+skill_dir = os.path.join(os.path.dirname(__file__), "status-report-generator")
 
 skill = client.beta.skills.create(
     display_title="Status Report Generator",

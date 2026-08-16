@@ -17,6 +17,9 @@ envoyé à Anthropic, qui renvoie un `skill.id` réutilisable dans de futures re
   *quand* utiliser ce skill) et des instructions pour transformer des notes de
   projet en rapport de statut structuré (Done / In progress / Blockers / Next
   steps).
+- L'API impose que le **nom du dossier corresponde exactement au champ `name`**
+  du `SKILL.md`. Le dossier a donc été renommé en `status-report-generator/`
+  pour matcher `name: status-report-generator`.
 
 ## Installer les dépendances
 
