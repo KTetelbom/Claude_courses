@@ -13,3 +13,4 @@ Cas pratiques et exercices réalisés dans le cadre du cours Anthropic sur Claud
 | 1 | [Revue de code automatisée](exercices/01-code-review) | ✅ |
 | 2 | [Boucle d'agent avec un tool (météo)](exercices/02-agent-loop-weather) | ✅ |
 | 3 | [toolRunner avec deux tools (TypeScript)](exercices/03-tool-runner-weather) | ✅ |
+| 4 | [Créer un Skill (rapport de statut)](exercices/04-skills-status-report) | ✅ |
