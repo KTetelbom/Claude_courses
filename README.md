@@ -16,3 +16,4 @@ Cas pratiques et exercices réalisés dans le cadre du cours Anthropic sur Claud
 | 4 | [Créer un Skill (rapport de statut)](exercices/04-skills-status-report) | ✅ |
 | 5 | [Attacher le skill à une requête](exercices/05-skill-in-request) | ✅ |
 | 6 | [Se connecter à un serveur MCP (Linear)](exercices/06-mcp-linear) | ✅ |
+| 7 | [Lister puis restreindre les outils d'un serveur MCP](exercices/07-mcp-tool-selection) | ✅ |
