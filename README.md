@@ -15,3 +15,4 @@ Cas pratiques et exercices réalisés dans le cadre du cours Anthropic sur Claud
 | 3 | [toolRunner avec deux tools (TypeScript)](exercices/03-tool-runner-weather) | ✅ |
 | 4 | [Créer un Skill (rapport de statut)](exercices/04-skills-status-report) | ✅ |
 | 5 | [Attacher le skill à une requête](exercices/05-skill-in-request) | ✅ |
+| 6 | [Se connecter à un serveur MCP (Linear)](exercices/06-mcp-linear) | ✅ |
