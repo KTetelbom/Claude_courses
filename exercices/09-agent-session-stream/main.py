@@ -50,15 +50,14 @@ client.beta.sessions.events.send(
     ],
 )
 
-stream = client.beta.sessions.events.stream(session.id)
-
-for event in stream:
-    if event.type == "agent.message":
-        for block in event.content:
-            if block.type == "text":
-                print(block.text, end="", flush=True)
-    elif event.type == "agent.tool_use":
-        print(f"\n[tool] {event.name}")
-    elif event.type == "session.status_idle":
-        print("\n--- Agent done ---")
-        break
+with client.beta.sessions.events.stream(session.id) as stream:
+    for event in stream:
+        if event.type == "agent.message":
+            for block in event.content:
+                if block.type == "text":
+                    print(block.text, end="", flush=True)
+        elif event.type == "agent.tool_use":
+            print(f"\n[tool] {event.name}")
+        elif event.type == "session.status_idle":
+            print("\n--- Agent done ---")
+            break

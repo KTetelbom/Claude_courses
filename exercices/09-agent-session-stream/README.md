@@ -18,6 +18,12 @@ l'agent avec `client.beta.sessions.events.send(...)` avant de lancer le stream
 — sans ça, il n'y a rien à observer et le flux resterait simplement ouvert
 sans événements intéressants.
 
+Le `stream` est aussi ouvert avec `with client.beta.sessions.events.stream(...) as stream:`
+plutôt qu'une simple affectation, pour que la connexion HTTP sous-jacente soit
+fermée proprement dès la sortie de la boucle (le `break` sur `session.status_idle`
+laissait sinon la connexion à moitié consommée, ce qui pouvait provoquer un
+message d'erreur de nettoyage sans gravité à la fermeture de Python).
+
 ## Installer les dépendances
 
 Depuis la racine du projet :
