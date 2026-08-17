@@ -55,3 +55,25 @@ python exercices/08-create-agent/create_environment.py
 Le script affiche l'ID de l'environnement créé (`env_...`) — il servira à
 démarrer une session pour l'agent dans un prochain exercice
 (`client.beta.sessions.create(agent=..., environment_id=...)`).
+
+## Créer la session (`create_session.py`)
+
+Une **session** est ce qui relie un agent à un environnement pour exécuter
+une tâche concrète. Votre code (`client.beta.sessions.create(agent=agent.id,
+environment_id=environment.id, title=...)`) était déjà correct : `agent`
+accepte bien un simple ID sous forme de chaîne, et le header beta est encore
+une fois injecté automatiquement par le SDK.
+
+Comme une session a besoin d'un `agent.id` et d'un `environment_id` "vivants"
+au même moment, `create_session.py` enchaîne les trois étapes vues dans cet
+exercice (créer l'agent → créer l'environnement → créer la session) en un
+seul script, plutôt que de vous faire recopier des IDs à la main entre
+plusieurs exécutions.
+
+```
+python exercices/08-create-agent/create_session.py
+```
+
+Le script affiche l'ID de la session créée (`session_...`) — c'est cet ID
+qui servira, dans un prochain exercice, à envoyer une tâche à l'agent et à
+suivre son exécution (streaming d'événements).
