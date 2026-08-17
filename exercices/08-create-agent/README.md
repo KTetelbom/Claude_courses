@@ -35,3 +35,23 @@ python exercices/08-create-agent/main.py
 
 Le script affiche l'ID de l'agent créé (`agent_...`) — notez-le, il servira à
 lui envoyer des tâches dans un prochain exercice.
+
+## Créer l'environnement (`create_environment.py`)
+
+Un agent manégé s'exécute dans un **environnement** (bac à sable cloud isolé).
+`create_environment.py` en crée un avec un accès réseau non restreint.
+
+Votre extrait de code était en fait déjà correct tel quel par rapport à l'API
+du SDK — j'ai seulement ajouté le chargement de `.env.local` et l'affichage
+de l'ID créé, comme pour `main.py`. Notez que, contrairement aux autres appels
+beta vus jusqu'ici, `environments.create()` n'a pas besoin qu'on lui passe
+`betas=[...]` explicitement : le SDK ajoute automatiquement le header
+`managed-agents-2026-04-01` pour cet endpoint.
+
+```
+python exercices/08-create-agent/create_environment.py
+```
+
+Le script affiche l'ID de l'environnement créé (`env_...`) — il servira à
+démarrer une session pour l'agent dans un prochain exercice
+(`client.beta.sessions.create(agent=..., environment_id=...)`).
